@@ -1,12 +1,12 @@
 :root {
     --orbit-size: 80vh;
-    --colour-a: #080C08;
-    --colour-b: #FE485A;
-    --colour-c: #6D7275;
-    --colour-d: #C7D6D5;
-    --colour-e: #ECEBF3;
-    --primary-font-colour: #C7D6D5;
-    --feature-font-colour: #FE485A;
+    --colour-a: #0B0A09;
+    --colour-b: #E6AF2E;
+    --colour-c: #E0E2DB;
+    --colour-d: #8179CD;
+    --colour-e: #B3AA94;
+    --primary-font-colour: #B3AA94;
+    --feature-font-colour: #E0E2DB;
     --orbit-speed: 20s;
 }
 
@@ -42,10 +42,15 @@ body {
     background-color: var(--colour-b); 
 }
 
+::selection {
+    background: var(--colour-b);
+    color: var(--colour-a);
+}
+
 /* ----------------------start-of-menu------------------------- */
 
 .landing-container {
-    height: 100vh;
+    height: 90vh;
 }
 
 #circle-wrapper {
@@ -66,7 +71,7 @@ body {
     aspect-ratio: 1 / 1;
     position: absolute;
     opacity: 1;
-    transition: opacity 750ms ease 50ms;
+    transition: opacity 600ms ease;
     transform: rotateX(45deg)
             rotateY(-15deg);
 }
@@ -100,15 +105,10 @@ body {
 
 @keyframes orbitrotate {
     0% {
-        opacity: 1;
         transform: rotateX(45deg)
             rotateY(-15deg);
     }
-    80% {
-        opacity: 0;
-    }
     100% {
-        opacity: 0;
         transform: rotateX(90deg)
             rotateY(0deg);
     }
@@ -199,8 +199,8 @@ body {
 .menu-item {
     background-color: var(--colour-a);
     border: 2px solid;
-    background-color: var(--colour-a);
     border-radius: 50%;
+    border-color: var(--colour-b);
     aspect-ratio: 1 / 1;
     position: absolute;
     overflow: hidden;
@@ -218,25 +218,25 @@ body {
 }
 
 #menu-a {
-    border-color: var(--colour-c);
+    /* border-color: var(--colour-c); */
     height: 8vh;
     top: calc(50% - 4vh);
     left: calc(50% - 20vh - 3px);
     opacity: 0;
-    transition: opacity 200ms ease-in-out;
+    transition: opacity 400ms ease-in-out;
 }
 
 #menu-b {
-    border-color: var(--colour-d);
+    /* border-color: var(--colour-d); */
     height: 12vh;
     top: calc(50% - 6vh);
     left: calc(50% - 10vh);
     opacity: 0;
-    transition: opacity 400ms ease-in-out;
+    transition: opacity 600ms ease-in-out;
 }
 
 #menu-c {
-    border-color: var(--colour-e);
+    /* border-color: var(--colour-e); */
     height: 16vh;
     top: calc(50% - 8vh);
     left: calc(50% + 4vh + 3px);
@@ -263,7 +263,7 @@ body {
     0% {
         opacity: 0;
     }
-    25% {
+    33% {
         opacity: 0;
     }
     100% {
@@ -277,8 +277,8 @@ body {
     height: 104px;
     position: absolute;
     top: 40%;
-    left: 10%;
-    width: 40%;
+    left: 18%;
+    width: 400px;
 }
 
 #bio {
@@ -294,12 +294,16 @@ body {
     white-space: nowrap;
 }
 
+#bio > div {
+    margin-left: 2px;
+}
+
 .intro-self {
     display: inline-block;
     font-size: 36px;
     margin-bottom: 0px;
     margin-top: 0px;
-    font-weight: 400;
+    font-weight: 200;
 }
 
 .intro-self > strong {
@@ -361,90 +365,43 @@ body {
 /* -----------------------end-of-landing----------------------- */
 
 .content-card {
-    padding-top: 15vh;
-    padding-bottom: 25vh;
+    padding-top: 26vh;
+    padding-bottom: 16vh;
     display: flex;
 }
 
-.card-text {
-    margin-top: auto;
-    margin-bottom: auto;
-    margin-left: 10%;
+.text-wrapper {
+    margin: auto;
+    margin-right: 0%;
     width: 40%;
-    overflow-x: hidden;
 }
 
-.card-text-body {
-    position: relative;
-    width: 90%;
-    height: 200px;
-    overflow: hidden;
-    border-top: 1px solid;
-    border-color: var(--colour-b);
-}
-
-.summary {
-    position: absolute;
-    width: 90%;
-    margin-right: 10%;
-    font-size: 24px;   
-}
-
-.summary > p {
-    color: var(--primary-font-colour);
-    margin: 0px;
-    padding: 10px;
-}
-
-.elaborate {
-    background-color: var(--colour-a);
-    position: absolute;
-    top: calc(100% - 44px);
-    width: 100%;
-    height: calc(100% + 44px);
-    font-size: 20px;
-    transition: transform 600ms ease;
-}
-
-.elaborate:hover {
-    transform: translateY(calc(-100% + 42px));
-}
-
-.elaborate p {
-    color: var(--primary-font-colour);
-    margin: 0px;
-    padding: 10px;
-    padding-top: 20px;
-    border-top: 1px solid;
-    border-color: var(--colour-b);
-}
-
-.read-more {
-    border: 1px solid;
-    border-bottom: 0px;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-    border-color: var(--colour-b);
-    padding: 6px;
-    font-size: 18px;
-    font-weight: 200;
-    height: 24px;
-    margin: 0px;
-    margin-left: 12px;
-    display: inline-block;
+.card-text {
+    margin-right: auto;
+    margin-left: auto;
+    width: 60%;
 }
 
 .card-text > h1 {
     font-size: 28px;
-    margin: 4px;
-    margin-left: 10px;
+    margin: 0px;
+    padding: 10px;
+    border-bottom: 1px solid;
+    border-color: var(--colour-b);
+}
+
+.card-text > p {
+    color: var(--primary-font-colour);
+    margin: 0px;
+    padding: 10px;
+    font-size: 20px;
 }
 
 .call-to-action {
     display: inline-block;
-    margin-top: 12px;
-    margin-left: 10px;
+    margin: 10px;
     overflow: hidden;
+    white-space: nowrap;
 }
 
 .call-to-action > p {
@@ -466,6 +423,7 @@ body {
 
 .call-to-action:hover .cta-underline {
     animation: underline-anim 800ms ease;
+    animation-iteration-count: 1;
 }
 
 @keyframes underline-anim {
@@ -501,17 +459,78 @@ body {
 }
 
 .card-img {
-    margin-left: auto;
-    margin-right: auto;
-    width: 40%;
+    margin: auto;
+    margin-left: 0%;
+    width: 35%;
     height: 350px;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: row;
+}
+
+.slideshow-wrapper {
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: row;
+}
+
+.slideshow {
+    aspect-ratio: 16 / 9;
+    border-radius: 5px;
+    overflow: hidden;
+    display: flex;
+}
+
+.slideshow > img {
+    aspect-ratio: 16 / 9;
+    border-radius: 5px;
+    border: 1px solid;
+    border-color: var(--colour-a);
+    width: 100%;
+    animation: slides 12s ease infinite;
+    object-fit: contain;
+}
+
+@keyframes slides {
+    0% {
+        transform: translateX(0%);
+    }
+    20% {
+        transform: translateX(-100%);
+    }
+    30% {
+        transform: translateX(-100%);
+    }
+    50% {
+        transform: translateX(-200%);
+    }
+    60% {
+        transform: translateX(-200%);
+    }
+    90% {
+        transform: translateX(-300%);
+    }
+    100% {
+        transform: translateX(-300%);
+    }
 }
 
 .card-img > img {
     border-radius: 5px;
     height: 100%;
     object-fit: contain;
+}
+
+.card-img > video {
+    border-radius: 5px;
+    height: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
 }
 
 /* -----------------------end-of-content----------------------- */
