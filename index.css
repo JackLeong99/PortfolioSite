@@ -373,7 +373,7 @@ body {
 }
 
 .intro-blurb {
-    display: inline-flex;
+    display: inline-block;
     font-size: 24px;
     margin-top: 0px;
     margin-bottom: 0px;
@@ -401,33 +401,15 @@ body {
     }
     
     #bio {
-        color: var(--colour-d);
-        user-select: none;
-        height: 100%;
         padding-left: 2px;
-        animation: width-appear 1200ms ease-in-out;
-        white-space: nowrap;
     }
 
     .intro-blurb {
-        display: flex;
         font-size: 20px;
-        margin-top: 0px;
-        margin-bottom: 0px;
-        font-weight: 400;
-    }
-    
-    .intro-blurb > strong {
-        font-weight: 300;
-        color: var(--colour-e);
     }
     
     #intro-cursor {
-        display: inline-block;
-        font-size: 24px;
-        margin: 0px;
-        font-weight: 200;
-        animation: cursorblink 1.2s infinite step-end;
+        font-size: 20px;
     }
 }
 
