@@ -10,14 +10,14 @@
     /* Feature text font colour */
     --colour-e: #006989;
 
-    /* Alt Colour palette (Onyx) */
-    /* --colour-a: #393E41; */
-    /* --colour-b: #D3D0CB; */
-    /* --colour-c: #E7E5DF; */
+    /* Original Colour palette */
+    /* --colour-a: #0B0A09; */
+    /* --colour-b: #E6AF2E; */
+    /* --colour-c: #8179CD; */
     /* Primary font colour */
-    /* --colour-d: #44BBA4; */
+    /* --colour-d: #B3AA94; */
     /* Feature text font colour */
-    /* --colour-e: #E7BB41; */
+    /* --colour-e: #E0E2DB; */
 }
 
 html {
