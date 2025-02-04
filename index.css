@@ -99,48 +99,6 @@ body {
     animation: orbitunrotate 800ms ease-out;
 }
 
-@media only screen and (max-width: 600px) {
-    .landing-container {
-        height: 100vh;
-    }
-
-    #circle-wrapper {
-        height: var(--orbit-size);
-        overflow: hidden;
-        padding-left: 0vw;
-        padding-right: 0vw;
-        aspect-ratio: 1 / 1;
-        position: absolute;
-        right: 0%;
-        top: 10%;
-        animation: fadeInAnimation ease-out 2000ms;
-        animation-iteration-count: 1;
-        animation-fill-mode: forwards;
-    }
-    
-    #circle-feature {
-        height: 100%;
-        aspect-ratio: 1 / 1;
-        position: absolute;
-        opacity: 1;
-        transition: opacity 600ms ease;
-        transform: rotateX(45deg)
-                rotateY(-15deg);
-    }
-    
-    #circle-wrapper:hover #circle-feature {
-        animation: orbitrotate 800ms ease;
-        top: 0%;
-        opacity: 0;
-        transform: rotateX(90deg)
-                rotateY(0deg);
-    }
-    
-    #circle-wrapper:not(:hover) #circle-feature {
-        animation: orbitunrotate 800ms ease-out;
-    }
-}
-
 @keyframes fadeInAnimation {
     0% {
         opacity: 0;
@@ -246,6 +204,10 @@ body {
     padding-right: 6vw;
     aspect-ratio: 1 / 1;
     position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 24px;
     right: calc(10% - 6vw);
 }
 
@@ -255,7 +217,7 @@ body {
     border-radius: 50%;
     border-color: var(--colour-b);
     aspect-ratio: 1 / 1;
-    position: absolute;
+    display: flex;
     overflow: hidden;
 }
 
@@ -273,8 +235,6 @@ body {
 #menu-a {
     /* border-color: var(--colour-e); */
     height: 8vh;
-    top: calc(50% - 4vh);
-    left: calc(50% - 20vh - 3px);
     opacity: 0;
     transition: opacity 400ms ease-in-out;
 }
@@ -282,8 +242,6 @@ body {
 #menu-b {
     /* border-color: var(--colour-c); */
     height: 12vh;
-    top: calc(50% - 6vh);
-    left: calc(50% - 10vh);
     opacity: 0;
     transition: opacity 600ms ease-in-out;
 }
@@ -291,8 +249,6 @@ body {
 #menu-c {
     /* border-color: var(--colour-d); */
     height: 16vh;
-    top: calc(50% - 8vh);
-    left: calc(50% + 4vh + 3px);
     opacity: 0;
     transition: opacity 800ms ease-in-out;
 }
@@ -315,11 +271,55 @@ body {
 @media only screen and (max-width: 600px) {
     #menu-wrapper {
         height: var(--orbit-size);
-        padding-left: 6vw;
-        padding-right: 6vw;
+        padding-left: 0vw;
+        padding-right: 0vw;
         aspect-ratio: 1 / 1;
-        position: flex;
-        right: calc(10% - 6vw);
+        position: absolute;
+        display: flex;
+        justify-content: right;
+        align-items: center;
+        column-gap: 24px;
+        right: 12px;
+    }
+
+    .landing-container {
+        height: 100vh;
+    }
+
+    #circle-wrapper {
+        height: var(--orbit-size);
+        overflow: hidden;
+        padding-left: 0vw;
+        padding-right: 0vw;
+        aspect-ratio: 1 / 1;
+        position: absolute;
+        right: 0%;
+        top: 10%;
+        animation: fadeInAnimation ease-out 2000ms;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+    }
+    
+    #circle-feature {
+        height: 100%;
+        aspect-ratio: 1 / 1;
+        position: absolute;
+        opacity: 1;
+        transition: opacity 600ms ease;
+        transform: rotateX(45deg)
+                rotateY(-15deg);
+    }
+    
+    #circle-wrapper:hover #circle-feature {
+        animation: orbitrotate 800ms ease;
+        top: 0%;
+        opacity: 0;
+        transform: rotateX(90deg)
+                rotateY(0deg);
+    }
+    
+    #circle-wrapper:not(:hover) #circle-feature {
+        animation: orbitunrotate 800ms ease-out;
     }
 }
 
