@@ -11,9 +11,9 @@
     /* Light/Printable Colour palette */
     --colour-x: #D5D0CD;
     /* Primary font colour */
-    --colour-y: #0A1128;
+    --colour-y: #0d1e2b;
     /* Feature text font colour */
-    --colour-z: #034078;
+    --colour-z: #FFC759;
 }
 
 ::selection {
@@ -110,7 +110,7 @@ ul {
 }
 
 li::marker {
-    content: '▸ ';
+    content: '◿ ';
     font-size: 1.0em;
   }
 
@@ -151,6 +151,10 @@ li::marker {
     padding: 0px;
     background: none;
     border: none;
+}
+
+#linkedin-divider {
+    display: inline;
 }
 
 @media only screen and (max-width: 600px) { 
@@ -230,7 +234,6 @@ li::marker {
     }
     
     li::marker {
-        content: '▸ ';
         font-size: 1.0em;
       }
     
@@ -260,5 +263,17 @@ li::marker {
 
     #notes {
         display: none;
+    }
+
+    #linkedin {
+        display: none;
+    }
+
+    #linkedin-divider {
+        display: none;
+    }
+
+    #work-experience {
+        page-break-before: always;
     }
 }
