@@ -1,22 +1,261 @@
 :root {
     /* Colour palette */
-    --colour-a: #F8F4E3;
-    --colour-b: #D4CDC3;
-    --colour-c: #D5D0CD;
+    --colour-a: #0d1e2b;
+    --colour-b: #119DA4;
+    --colour-c: #6D9DC5;
     /* Primary font colour */
-    --colour-d: #373F47;
+    --colour-d: #FFFCF2;
     /* Feature text font colour */
-    --colour-e: #006989;
+    --colour-e: #FFC759;
+}
+
+::selection {
+    /* background-color: var(--colour-b);  */
+    color: var(--colour-e);
+}
+
+h1::selection {
+    /* background-color: var(--colour-b);  */
+    color: var(--colour-d);
+}
+
+h2::selection {
+    /* background-color: var(--colour-b);  */
+    color: var(--colour-d);
+}
+
+a::selection {
+    /* background-color: var(--colour-b);  */
+    color: var(--colour-d);
 }
 
 html {
-    overflow-x: hidden;
     max-width: 100vw;
     background-color: var(--colour-a);
     font-family: 'Cormorant Garamond', serif;
     font-family: 'Montserrat', sans-serif;
-    color: var(--colour-e);
+    color: var(--colour-d);
     scroll-behavior: smooth;
     scrollbar-width: thin;
-    scrollbar-color: var(--colour-b) var(--colour-a);
+    scrollbar-color: var(--colour-e) var(--colour-a);
+}
+
+body {
+    margin: 0px;
+}
+
+.bodywrapper {
+    line-height: 1.6;
+    margin: 40px auto;
+    margin-top: 0px;
+    max-width: 800px;
+    padding: 0 20px;
+}
+
+a {
+    color: var(--colour-e);
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    transition: 0.75s;
+
+    /*add those for opera and mozilla support*/
+    -webkit-text-decoration-color: transparent;
+    -moz-text-decoration-color: transparent;
+}
+
+a:hover {
+    color: var(--colour-e);
+    text-decoration-color: var(--colour-e);
+ 
+    /*add those for opera and mozilla support*/
+    -webkit-text-decoration-color: var(--colour-e);
+    -moz-text-decoration-color: var(--colour-e);
+}
+
+.header {
+    text-align: left;
+    margin-bottom: 30px;
+    width: 800px;
+    height: 70px;
+    position: sticky;
+    margin-left: auto;
+    margin-right: auto;
+    top: 0px;
+    padding: 12px;
+    padding-left: 90px;
+    background-color: var(--colour-a);
+    border: solid 2px var(--colour-e);
+    border-top: 0px;
+    border-bottom-left-radius: 90px;
+    border-bottom-right-radius: 90px;
+}
+
+.header h1 {
+    color: var(--colour-e);
+    margin: 0;
+    font-size: 28px;
+}
+
+.contact-info {
+    font-size: 0.9em;
+    color: var(--colour-d);
+}
+
+.section {
+    margin-bottom: 25px;
+}
+
+h2 {
+    color: var(--colour-e);
+    border-bottom: 2px solid var(--colour-e);
+    padding-bottom: 5px;
+    font-size: 20px;
+    margin-top: 25px;
+}
+
+ul {
+    margin: 10px 0;
+    padding-left: 20px;
+}
+
+li::marker {
+    content: '▸ ';
+    font-size: 1.0em;
+  }
+
+.job-title {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.company {
+    font-style: italic;
+    color: var(--colour-d);
+}
+
+.date-range {
+    margin-left: auto;
+    color: var(--colour-d);
+}
+
+.companydate-wrapper {
+    display: flex;
+    flex-direction: row;
+}
+
+#printbutton {
+    position: fixed;
+    top: 6px;
+    right: 6px;
+    margin: 0px;
+}
+
+#printbutton > input {
+    font-size: 30px;
+    line-height: 2;
+    height: auto;
+    width: 50px;
+    margin: 0px !important;
+    display: inline !important;
+    padding: 0px;
+    background: none;
+    border: none;
+}
+
+@media print {
+    @page { margin: 0; }
+    body { margin: 1.6cm; }
+
+    body {
+        line-height: 1.6;
+        margin: 40px auto;
+        max-width: 800px;
+        padding: 0 20px;
+    }
+    
+    a {
+        color: var(--colour-e);
+        text-decoration: underline;
+        text-decoration-color: transparent;
+        transition: 0.75s;
+    
+        /*add those for opera and mozilla support*/
+        -webkit-text-decoration-color: transparent;
+        -moz-text-decoration-color: transparent;
+    }
+    
+    a:hover {
+        color: var(--colour-e);
+        text-decoration-color: var(--colour-e);
+     
+        /*add those for opera and mozilla support*/
+        -webkit-text-decoration-color: var(--colour-e);
+        -moz-text-decoration-color: var(--colour-e);
+    }
+    
+    .header {
+        text-align: left;
+        margin-bottom: 30px;
+    }
+    
+    .header h1 {
+        color: var(--colour-e);
+        margin: 0;
+        font-size: 28px;
+    }
+    
+    .contact-info {
+        font-size: 0.9em;
+        color: var(--colour-d);
+    }
+    
+    .section {
+        margin-bottom: 25px;
+    }
+    
+    h2 {
+        color: var(--colour-e);
+        border-bottom: 2px solid var(--colour-e);
+        padding-bottom: 5px;
+        font-size: 20px;
+        margin-top: 25px;
+    }
+    
+    ul {
+        margin: 10px 0;
+        padding-left: 20px;
+    }
+    
+    li::marker {
+        content: '▸ ';
+        font-size: 1.0em;
+      }
+    
+    .job-title {
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+    
+    .company {
+        font-style: italic;
+        color: var(--colour-d);
+    }
+    
+    .date-range {
+        margin-left: auto;
+        color: var(--colour-d);
+    }
+    
+    .companydate-wrapper {
+        display: flex;
+        flex-direction: row;
+    }
+
+    #printbutton {
+        display: none;
+    }
+
+    #notes {
+        display: none;
+    }
 }

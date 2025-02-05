@@ -2,13 +2,22 @@
     --orbit-size: 80vh;
     --orbit-speed: 20s;
     /* Colour palette */
-    --colour-a: #F8F4E3;
-    --colour-b: #D4CDC3;
-    --colour-c: #D5D0CD;
+    --colour-a: #0d1e2b;
+    --colour-b: #119DA4;
+    --colour-c: #6D9DC5;
     /* Primary font colour */
-    --colour-d: #373F47;
+    --colour-d: #FFFCF2;
     /* Feature text font colour */
-    --colour-e: #006989;
+    --colour-e: #FFC759;
+
+    /* light Colour palette */
+    /* --colour-a: #F8F4E3; */
+    /* --colour-b: #D4CDC3; */
+    /* --colour-c: #D5D0CD; */
+    /* Primary font colour */
+    /* --colour-d: #373F47; */
+    /* Feature text font colour */
+    /* --colour-e: #006989; */
 
     /* Original Colour palette */
     /* --colour-a: #0B0A09; */
@@ -54,8 +63,22 @@ body {
 
 ::selection {
     /* background-color: var(--colour-b);  */
-    /* color: var(--colour-c); */
-    text-decoration: underline; 
+    color: var(--colour-e);
+}
+
+h1::selection {
+    /* background-color: var(--colour-b);  */
+    color: var(--colour-d);
+}
+
+a::selection {
+    /* background-color: var(--colour-b);  */
+    color: var(--colour-d);
+}
+
+.footer-social > a::selection {
+    /* background-color: var(--colour-b);  */
+    color: var(--colour-e);
 }
 
 /* ----------------------start-of-menu------------------------- */
@@ -382,6 +405,7 @@ body {
 
 .intro-blurb > strong {
     font-weight: 300;
+    font-size: 28px;
     color: var(--colour-e);
 }
 
@@ -463,6 +487,7 @@ body {
 }
 
 .card-text > h1 {
+    color: var(--colour-e);
     font-size: 28px;
     margin: 0px;
     padding: 10px;

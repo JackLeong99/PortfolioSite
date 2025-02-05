@@ -1,12 +1,39 @@
 :root {
     /* Colour palette */
-    --colour-a: #F8F4E3;
-    --colour-b: #D4CDC3;
-    --colour-c: #D5D0CD;
+    --colour-a: #0d1e2b;
+    --colour-b: #119DA4;
+    --colour-c: #6D9DC5;
     /* Primary font colour */
-    --colour-d: #373F47;
+    --colour-d: #FFFCF2;
     /* Feature text font colour */
-    --colour-e: #006989;
+    --colour-e: #FFC759;
+
+    /* Light/Printable Colour palette */
+    --colour-x: #D5D0CD;
+    /* Primary font colour */
+    --colour-y: #0A1128;
+    /* Feature text font colour */
+    --colour-z: #034078;
+}
+
+::selection {
+    /* background-color: var(--colour-b);  */
+    color: var(--colour-e);
+}
+
+h1::selection {
+    /* background-color: var(--colour-b);  */
+    color: var(--colour-d);
+}
+
+h2::selection {
+    /* background-color: var(--colour-b);  */
+    color: var(--colour-d);
+}
+
+a::selection {
+    /* background-color: var(--colour-b);  */
+    color: var(--colour-d);
 }
 
 html {
@@ -32,7 +59,7 @@ a {
     color: var(--colour-e);
     text-decoration: underline;
     text-decoration-color: transparent;
-    transition: 0.75s;
+    transition: 1s;
 
     /*add those for opera and mozilla support*/
     -webkit-text-decoration-color: transparent;
@@ -42,7 +69,8 @@ a {
 a:hover {
     color: var(--colour-e);
     text-decoration-color: var(--colour-e);
- 
+    transition: 0.5s;
+
     /*add those for opera and mozilla support*/
     -webkit-text-decoration-color: var(--colour-e);
     -moz-text-decoration-color: var(--colour-e);
@@ -82,7 +110,7 @@ ul {
 }
 
 li::marker {
-    content: '↪ ';
+    content: '▸ ';
     font-size: 1.0em;
   }
 
@@ -107,7 +135,7 @@ li::marker {
 }
 
 #printbutton {
-    position: absolute;
+    position: fixed;
     top: 6px;
     right: 6px;
     margin: 0px;
@@ -125,11 +153,112 @@ li::marker {
     border: none;
 }
 
+@media only screen and (max-width: 600px) { 
+    #printbutton {
+        position: absolute;
+        top: 6px;
+        right: 6px;
+        margin: 0px;
+    }
+}
+
 @media print {
     @page { margin: 0; }
-    body { margin: 1.6cm; }
+
+    html{
+        color: var(--colour-y);
+    }
+
+    body {
+        line-height: 1.6;
+        margin: 1.6cm;
+        max-width: 800px;
+        padding: 0 20px;
+    }
+    
+    a {
+        color: var(--colour-z);
+        text-decoration: underline;
+        text-decoration-color: transparent;
+        transition: 0.75s;
+    
+        /*add those for opera and mozilla support*/
+        -webkit-text-decoration-color: transparent;
+        -moz-text-decoration-color: transparent;
+    }
+    
+    a:hover {
+        color: var(--colour-z);
+        text-decoration-color: var(--colour-z);
+     
+        /*add those for opera and mozilla support*/
+        -webkit-text-decoration-color: var(--colour-z);
+        -moz-text-decoration-color: var(--colour-z);
+    }
+    
+    .header {
+        text-align: left;
+        margin-bottom: 30px;
+    }
+    
+    .header h1 {
+        color: var(--colour-z);
+        margin: 0;
+        font-size: 28px;
+    }
+    
+    .contact-info {
+        font-size: 0.9em;
+        color: var(--colour-y);
+    }
+    
+    .section {
+        margin-bottom: 25px;
+    }
+    
+    h2 {
+        color: var(--colour-z);
+        border-bottom: 2px solid var(--colour-z);
+        padding-bottom: 5px;
+        font-size: 20px;
+        margin-top: 25px;
+    }
+    
+    ul {
+        margin: 10px 0;
+        padding-left: 20px;
+    }
+    
+    li::marker {
+        content: '▸ ';
+        font-size: 1.0em;
+      }
+    
+    .job-title {
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+    
+    .company {
+        font-style: italic;
+        color: var(--colour-y);
+    }
+    
+    .date-range {
+        margin-left: auto;
+        color: var(--colour-y);
+    }
+    
+    .companydate-wrapper {
+        display: flex;
+        flex-direction: row;
+    }
 
     #printbutton {
+        display: none;
+    }
+
+    #notes {
         display: none;
     }
 }
