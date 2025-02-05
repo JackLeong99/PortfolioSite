@@ -422,6 +422,8 @@ a::selection {
         position: absolute;
         top: 40%;
         left: 0%;
+        max-width: 100vw;
+        overflow-x: hidden;
     }
     
     #bio {
@@ -430,6 +432,10 @@ a::selection {
 
     .intro-blurb {
         font-size: 20px;
+    }
+
+    .intro-blurb > strong {
+        font-size: 22px;
     }
     
     #intro-cursor {
