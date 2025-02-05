@@ -62,23 +62,31 @@ body {
 }
 
 ::selection {
-    /* background-color: var(--colour-b);  */
     color: var(--colour-e);
 }
 
 h1::selection {
-    /* background-color: var(--colour-b);  */
     color: var(--colour-d);
 }
 
 a::selection {
-    /* background-color: var(--colour-b);  */
     color: var(--colour-d);
 }
 
 .footer-social > a::selection {
-    /* background-color: var(--colour-b);  */
     color: var(--colour-e);
+}
+
+.intro-self::selection {
+    color: var(--colour-e);
+}
+
+.intro-self > strong::selection {
+    color: var(--colour-d);
+}
+
+.intro-blurb > strong::selection {
+    color: var(--colour-d);
 }
 
 /* ----------------------start-of-menu------------------------- */
@@ -368,7 +376,7 @@ a::selection {
 
 #bio {
     color: var(--colour-d);
-    user-select: none;
+    /* user-select: none; */
     height: 100%;
     border-left: solid 2px;
     border-color: var(--colour-b);
