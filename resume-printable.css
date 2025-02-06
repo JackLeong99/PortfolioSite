@@ -178,6 +178,7 @@ li::marker {
         margin: 1.6cm;
         max-width: 800px;
         padding: 0 20px;
+        font-size: 14px;
     }
     
     a {
@@ -212,7 +213,8 @@ li::marker {
     }
     
     .contact-info {
-        font-size: 0.9em;
+        font-size: 1.2em;
+        font-weight: 400;
         color: var(--colour-y);
     }
     
