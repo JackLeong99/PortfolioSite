@@ -37,6 +37,22 @@ a::selection {
     color: var(--colour-d);
 }
 
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--colour-a); 
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(var(--colour-c), var(--colour-d), var(--colour-e));
+}
+
+/* ::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(var(--colour-c), var(--colour-d), var(--colour-e));
+} */
+
 html {
     overflow-x: hidden;
     max-width: 100vw;
@@ -45,8 +61,8 @@ html {
     font-family: 'Montserrat', sans-serif;
     color: var(--colour-d);
     scroll-behavior: smooth;
-    scrollbar-width: thin;
-    scrollbar-color: var(--colour-e) var(--colour-a);
+    /* scrollbar-width: thin;
+    scrollbar-color: var(--colour-e) var(--colour-a); */
 }
 
 body {
