@@ -373,7 +373,8 @@ li::marker {
         display: none;
     }
 
-    #work-experience {
-        /* page-break-before: always; */
+    #education {
+        page-break-before: always;
+        padding-top: 10%;
     }
 }

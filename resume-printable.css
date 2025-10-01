@@ -373,7 +373,8 @@ li::marker {
         display: none;
     }
 
-    #work-experience {
+    #technical-skills {
         page-break-before: always;
+        padding-top: 10%;
     }
 }

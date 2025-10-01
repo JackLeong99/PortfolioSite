@@ -496,7 +496,7 @@ a::selection {
 /* -----------------------end-of-landing----------------------- */
 
 .content-card {
-    padding-top: 26vh;
+    padding-top: 16vh;
     padding-bottom: 16vh;
     display: flex;
 }
