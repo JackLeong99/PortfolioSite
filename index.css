@@ -59,7 +59,7 @@ body {
 }
 
 ::-webkit-scrollbar {
-    width: 10px;
+    width: 6px;
 }
 
 ::-webkit-scrollbar-track {
@@ -67,7 +67,9 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-    background: linear-gradient(var(--colour-c), var(--colour-d), var(--colour-e));
+    /* background: linear-gradient(var(--colour-c), var(--colour-d), var(--colour-e)); */
+    background: var(--colour-d);
+    border-radius: 90px;
 }
 
 /* ::-webkit-scrollbar-thumb:hover {
@@ -83,7 +85,8 @@ h1::selection {
 }
 
 a::selection {
-    color: var(--colour-d);
+    color: var(--colour-a);
+    background-color: var(--colour-e);
 }
 
 .footer-social > a::selection {
