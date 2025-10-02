@@ -139,11 +139,14 @@ html {
 }
 
 body {
-    line-height: 1.6;
+    line-height: 1.5;
+    font-size: 14px;
     margin: 40px auto;
     max-width: 800px;
     padding: 0 20px;
     background-color: var(--colour-a);
+    padding: 0.8cm;
+    border: solid 1px var(--colour-d);
 }
 
 a {
@@ -175,11 +178,11 @@ a:hover {
 .header h1 {
     color: var(--colour-e);
     margin: 0;
-    font-size: 28px;
+    font-size: 1.4em;
 }
 
 .contact-info {
-    font-size: 0.9em;
+    font-size: 1em;
     color: var(--colour-d);
 }
 
@@ -238,7 +241,7 @@ a:hover {
     }
 
     body {
-        line-height: 1.6;
+        line-height: 1.5;
         margin: 1.6cm;
         max-width: 800px;
         padding: 0 20px;
@@ -272,11 +275,11 @@ a:hover {
     .header h1 {
         color: var(--colour-z);
         margin: 0;
-        font-size: 28px;
+        font-size: 1.4em;
     }
     
     .contact-info {
-        font-size: 1.2em;
+        font-size: 1em;
         font-weight: 400;
         color: var(--colour-y);
     }
