@@ -208,7 +208,6 @@ ul {
 }
 
 li::marker {
-    content: '◿ ';
     font-size: 1.0em;
   }
 
@@ -374,7 +373,7 @@ li::marker {
         display: none;
     }
 
-    #education {
+    #technical-skills {
         page-break-before: always;
         padding-top: 1.2cm;
     }
